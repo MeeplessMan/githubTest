@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+        const randomNumber = Math.random();
+        let computerMove = '';
+        let result = '';
+
+        if(randomNumber >= 0 && randomNumber < 0.33){
+            computerMove = 'rock';
+        }else if(randomNumber >= 0.33 && randomNumber < 0.66){
+            computerMove = 'paper';
+        }else {
+            computerMove = 'scissors';
+        }
+
+        if(computerMove ==='rock'){
+            result = 'Tie!';
+        }else if(computerMove === 'paper'){
+            result = 'You lose!';
+        }else{
+            result = 'You win!';
+        }
+        alert(`Computer move: ${computerMove}. ${result}`);
+    ">Rock</button>
+    <button onclick="
+        const randomNumber = Math.random();
+        let computerMove = '';
+        let result = '';
+
+        if(randomNumber >= 0 && randomNumber < 0.33){
+            computerMove = 'rock';
+        }else if(randomNumber >= 0.33 && randomNumber < 0.66){
+            computerMove = 'paper';
+        }else {
+            computerMove = 'scissors';
+        }
+
+        if(computerMove ==='rock'){
+            result = 'You Win!';
+        }else if(computerMove === 'paper'){
+            result = 'Tie!';
+        }else{
+            result = 'You Lose!';
+        }
+        alert(`Computer move: ${computerMove}. ${result}`);
+    ">Paper</button>
+    <button onclick="
+        const randomNumber = Math.random();
+        let computerMove = '';
+        let result = '';
+
+        if(randomNumber >= 0 && randomNumber < 0.33){
+            computerMove = 'rock';
+        }else if(randomNumber >= 0.33 && randomNumber < 0.66){
+            computerMove = 'paper';
+        }else {
+            computerMove = 'scissors';
+        }
+
+        if(computerMove ==='rock'){
+            result = 'You Lose!';
+        }else if(computerMove === 'paper'){
+            result = 'You Win!';
+        }else{
+            result = 'Tie!';
+        }
+        alert(`Computer move: ${computerMove}. ${result}`);
+    ">Scissors</button>
+
+    <script>
+
+    </script>
+  </body>
+</html>

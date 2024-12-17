@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+        playGame('rock');
+    ">Rock</button>
+    <button onclick="
+        playGame('paper');
+    ">Paper</button>
+    <button onclick="
+        playGame('scissors');
+    ">Scissors</button>
+
+    <script>
+        function playGame(playerMove){
+            const computerMove = pickComputerMove();
+
+            let result = '';
+            if(playerMove === 'scissors'){
+                if(computerMove ==='rock'){
+                    result = 'You Lose!';
+                }else if(computerMove === 'paper'){
+                    result = 'You Win!';
+                }else{
+                    result = 'Tie!';
+                }
+            }else if(playerMove === 'rock'){
+                if(computerMove ==='rock'){
+                    result = 'Tie!';
+                }else if(computerMove === 'paper'){
+                    result = 'You Lose!';
+                }else{
+                    result = 'You Win!';
+                }
+            }else if(playerMove === 'paper'){
+                if(computerMove ==='rock'){
+                    result = 'You Win!';
+                }else if(computerMove === 'paper'){
+                    result = 'Tie!';
+                }else{
+                    result = 'You Lose!';
+                }
+            }
+            alert(`You picked: ${playerMove}\nComputer move: ${computerMove}. ${result}`);
+        }
+        function pickComputerMove(){
+            let computerMove = '';
+            const randomNumber = Math.random();
+
+            if(randomNumber >= 0 && randomNumber < 0.33){
+                computerMove = 'rock';
+            }else if(randomNumber >= 0.33 && randomNumber < 0.66){
+                computerMove = 'paper';
+            }else {
+                computerMove = 'scissors';
+            }
+
+            return computerMove;
+        }
+    </script>
+  </body>
+</html>

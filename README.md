@@ -1,6 +1,3 @@
-# githubTest
+# Javascript tutorial
 
-
-## Subheader
-
-This is a practice
+This is a practice repository
